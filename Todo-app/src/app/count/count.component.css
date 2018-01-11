@@ -1,0 +1,13 @@
+#contain {
+    width: 360px;
+    margin: 30px auto;
+    
+  
+    
+}
+p{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block; 
+}

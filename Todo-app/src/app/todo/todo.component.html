@@ -1,0 +1,24 @@
+<app-count [count]="getTotalItems()"></app-count>
+<div id="container">
+  <div class="alert alert-danger" *ngIf="error">
+    <strong>Error!</strong> Please add some Items.
+  </div>
+
+  <h1>Add Items
+    <i class="fa fa-plus" (click)="addItems(value)">
+    </i>
+  </h1>
+
+  <input type="text" placeholder="Add Items" (keyup.enter)="addItems(value)" [(ngModel)]="value">
+
+  <ul (click)="$event.stopPropagation()">
+    <li *ngFor='let item of items;let i=index' (click)="onClick(i)">
+      <span (click)="delItems(i)">
+        <i class="fa fa-trash">
+        </i>
+      </span>
+      {{item}}
+    </li>
+  </ul>
+
+</div>
